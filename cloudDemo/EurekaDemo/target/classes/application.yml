@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: demo-Eureka
+
+server:
+  port: 8000
+
+eureka:
+  instance:
+    hostname: locahost
+  client:
+    # 是否从其他注册中心是否从其他注册中心获取信息
+    fetch-registry: false
+    # 是否去其他注册中心注册
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/

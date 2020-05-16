@@ -1,0 +1,25 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: zuul-demo
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
+zuul:
+  prefix: /demo-pro
+  routes:
+    # 模板微服务
+    template:
+      path: /template/**
+      serviceId: eureka-client-demo-template
+      strip-prefix: false   # 转发时候是否裁剪掉前缀
+  host:
+    connect-timeout-millis: 15000
+    socket-timeout-millis: 60000
+ribbon:
+  ConnectTimeout: 15000
+  ReadTimeout: 15000

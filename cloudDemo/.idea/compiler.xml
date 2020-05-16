@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="TemplateService" />
+        <module name="ZuulDemo" />
+        <module name="EurekaDemo" />
+        <module name="ServiceCommon" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="EurekaDemo" options="-parameters" />
+      <module name="ServiceCommon" options="-parameters" />
+      <module name="TemplateService" options="-parameters" />
+      <module name="ZuulDemo" options="-parameters" />
+    </option>
+  </component>
+</project>
